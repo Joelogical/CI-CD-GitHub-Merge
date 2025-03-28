@@ -8,5 +8,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to Render
-        run: curl ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+      - name: Deploy to production
+        run: |
+          curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
