@@ -1,0 +1,12 @@
+{
+  "name": "ci-cd-github-merge",
+  "version": "1.0.0",
+  "description": "CI/CD GitHub Actions Demo",
+  "scripts": {
+    "render-build": "cd develop && npm install && npm run build",
+    "start": "cd develop && npm start"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
