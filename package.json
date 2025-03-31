@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "CI/CD GitHub Actions Demo",
   "scripts": {
-    "render-build": "cd develop && npm install && npm run build",
+    "render-build": "cd develop && npm install",
     "start": "cd develop && npm start"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": "18.x"
   }
 }
