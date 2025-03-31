@@ -16,9 +16,9 @@ jobs:
           node-version: '18'
           
       - name: Install Dependencies
-        working-directory: ./Develop
+        working-directory: ./develop
         run: npm install
         
       - name: Run Cypress Tests
-        working-directory: ./Develop
+        working-directory: ./develop
         run: npx cypress run --component
