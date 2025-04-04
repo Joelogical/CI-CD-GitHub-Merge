@@ -1,20 +1,11 @@
-import models from "../models/index.js";
-import db from "../config/connection.js";
+import models from '../models/index.js';
+import db from '../config/connection.js';
 
 export default async (modelName: "Question", collectionName: string) => {
   try {
-    const model = models[modelName];
-    if (!model || !model.db || !model.db.db) {
-      throw new Error(
-        `Model ${modelName} not found or database not initialized`
-      );
-    }
-
-    let modelExists = await model.db.db
-      .listCollections({
-        name: collectionName,
-      })
-      .toArray();
+    let modelExists = await models[modelName].db.db.listCollections({
+      name: collectionName
+    }).toArray()
 
     if (modelExists.length) {
       await db.dropCollection(collectionName);
@@ -22,4 +13,4 @@ export default async (modelName: "Question", collectionName: string) => {
   } catch (err) {
     throw err;
   }
-};
+}
