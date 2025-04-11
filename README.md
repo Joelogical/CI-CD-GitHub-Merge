@@ -68,5 +68,5 @@ Through this project, I learned:
 - Automated testing practices
 - Deployment automation
 
-- Despite not having being able to acomplish the redner, I gave my best efforts towards the assignment. 
+- Despite not having being able to accomplish the render, I gave my best efforts towards the assignment. 
 I will continue to examine these principles in the future.
